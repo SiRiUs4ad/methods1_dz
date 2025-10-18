@@ -37,18 +37,38 @@ public class Main {
 
     public static void main(String[] args) {
 
-        boolean toUpperCase = false;
-        int start = 0, end = 4;
-        Scanner scanner = new Scanner(System.in);
-        String text;
+        // Task1
+        System.out.println(formatText("hello"));
+        System.out.println(formatText("HELLO", false));
+        System.out.println(formatText("java programming", 0, 4));
 
-        System.out.println("Enter text:");
-        text = scanner.nextLine();
+        // Task2
+        System.out.println(Task2.containsSubstring("Java Programming", "prog"));
+        System.out.println(Task2.containsSubstring("Java Programming", "Prog", true));
+        System.out.println(Task2.containsSubstring("Hello", 'e'));
 
-        System.out.println(formatText(text));
-        System.out.println(formatText(text, toUpperCase));
-        System.out.println(formatText(text, start, end));
+        // Task3
+        System.out.println(Task3.replaceCharacter("banana", 'a', 'o'));
+        System.out.println(Task3.replaceCharacter("banana", 'a', "123"));
+        System.out.println(Task3.replaceCharacter("banana", "na", "NA"));
 
+        // Task4
+        System.out.println(Task4.findWord("Java Programming", "Program"));
+        System.out.println(Task4.findWord("Java Programming", "program", true));
+        System.out.println(Task4.findWord("Hello", 'o'));
+        System.out.println(Task4.findWord("Hello", 'x'));
+
+        // Task5
+        System.out.println(Task5.trimAndConvertCase("   Java   "));
+        System.out.println(Task5.trimAndConvertCase("   Java   ", false));
+        System.out.println(Task5.trimAndConvertCase("   Java Programming   ", true, true));
+
+        // Task6
+        String[] words = {"java", "is", "awesome"};
+
+        System.out.println(Task6.buildText(words));
+        System.out.println(Task6.buildText(words, "-"));
+        System.out.println(Task6.buildText(words, " ", true));
 
     }
 }
